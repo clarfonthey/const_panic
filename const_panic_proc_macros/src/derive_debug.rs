@@ -346,6 +346,7 @@ fn emit_inherent_impl(
     quote!(
         #impl_header
         {
+            #[doc(hidden)]
             pub const fn to_panicvals(
                 &self,
                 mut fmtarg: __cp_bCj7dq3Pud::FmtArg,

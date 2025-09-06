@@ -21,6 +21,7 @@ fn derive_struct_formatting() {
     assert_eq!(fmt_flatten!(FmtArg::ALT_DEBUG, foo), *format!("{:#?}", foo));
 }
 
+#[deny(missing_docs)]
 #[derive(Debug, PanicFmt)]
 #[pfmt(crate = ::cpanic)]
 struct Foo<'a> {
@@ -36,6 +37,7 @@ fn derive_enum_formatting() {
     }
 }
 
+#[deny(missing_docs)]
 #[derive(Debug, PanicFmt)]
 #[pfmt(crate = cpanic)]
 enum Qux {
